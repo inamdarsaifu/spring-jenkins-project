@@ -1,6 +1,6 @@
 pipeline{
 
-	agen any
+	agent any
 
 	environment{
 		PATH="/usr/bin:$PATH"
