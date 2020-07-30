@@ -1,12 +1,12 @@
 node{
 
 	environment{
-		PATH="/usr/bin/:$PATH"
+		PATH="/usr/bin:$PATH"
 	}
 
 	stage('Checkout'){
 		step{
-			git credentialsId: 'GitConnect', url: 'https://github.com/inamdarsaifu/spring-jenkins-project.git'i
+			git credentialsId: 'GitConnect', url: 'https://github.com/inamdarsaifu/spring-jenkins-project.git'
 		}
 
 	}
