@@ -4,6 +4,7 @@ node{
 		PATH="/usr/bin:$PATH"
 	}
 
+	stages{
 	stage('Checkout'){
 		step{
 			git credentialsId: 'GitConnect', url: 'https://github.com/inamdarsaifu/spring-jenkins-project.git'
@@ -15,5 +16,6 @@ node{
 		step{
 			sh 'mvn clean package'
 		}	
+	}
 	}
 }
