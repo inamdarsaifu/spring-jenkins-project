@@ -1,9 +1,19 @@
 node{
+
+	environment{
+		PATH="/usr/bin/:$PATH"
+	}
+
 	stage('Checkout'){
-		git 'https://github.com/inamdarsaifu/spring-jenkins-project.git'
+		step{
+			git credentialsId: 'GitConnect', url: 'https://github.com/inamdarsaifu/spring-jenkins-project.git'i
+		}
 
 	}
-	stage('compile'){
-		sh 'mvn package'	
+
+	stage('Maven Build'){
+		step{
+			sh 'mvn clean package'
+		}	
 	}
 }
