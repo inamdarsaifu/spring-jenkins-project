@@ -1,4 +1,6 @@
-node{
+pipeline{
+
+	agen any
 
 	environment{
 		PATH="/usr/bin:$PATH"
